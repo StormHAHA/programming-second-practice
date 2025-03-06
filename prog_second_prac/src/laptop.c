@@ -88,5 +88,6 @@ struct Laptop* initDynamicStruct(const char *vendor, const char *processorModel,
 
 void removeStruct(struct Laptop* laptop) {
     if (!laptop) return;
+    free(laptop);
     printf("Ноутбук %s удален\n", laptop -> vendor);
 }
