@@ -17,11 +17,11 @@ typedef enum {
 } FieldType;
 
 struct Laptop {
-    char vendor[N];
-    char processorModel[N];
-    bool hasGamingVideoChip;
-    float displayWide;
-    float price;
+    char vendor[N];         // Название производителя ноутбука
+    char processorModel[N]; // Модель процессора
+    bool hasGamingVideoChip;// Наличие игрового видеочипа
+    float displayWide;      // Диагональ экрана
+    float price;            // Цена ноутбука
 };
 
 int isCorrectStruct(const struct Laptop* m);
@@ -32,4 +32,4 @@ int changeField(struct Laptop* laptop, FieldType field, void* value);
 struct Laptop* initDynamicStruct(const char *vendor, const char *processorModel, bool hasGamingVideoChip, float displayWide, float price);
 void removeStruct(struct Laptop* laptop);
 
-#endif // LAPTOP_H
+#endif // LAPTOP_H / др вар #pragma once
